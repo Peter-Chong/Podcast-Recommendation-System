@@ -9,6 +9,7 @@ Created on Mon Jun 28 20:42:34 2021
 from bs4 import BeautifulSoup
 import requests
 import json
+import pandas as pd
 
 def to_int(value):
     if 'K' in value:
@@ -64,7 +65,6 @@ def scrape(link):
             description = ""
     except Exception:
         print("Link not working:", link)
-        scrape(link) # Loop until it works
     details = {
         'title': title,
         'producer': producer,
@@ -79,6 +79,7 @@ def scrape(link):
 podcasts_dict = []
 counter = 1
 
+"""
 with open('all_podcast_links.json') as file:
     links = json.load(file)
     for link in links:
@@ -96,3 +97,26 @@ with open('all_podcast_links.json') as file:
 
 with open('./data/json/podcast_info.json', 'w') as outfile:
     json.dump(podcasts_dict, outfile)
+"""
+
+with open('../data/json/podcast_info.json') as file:
+        podcasts = json.load(file)
+
+df = pd.DataFrame(podcasts)
+missing_df = df[df['title'].values == '']
+
+for index, row in missing_df.iterrows():
+    try:
+        podcast_info = scrape(row.link)
+        podcast_info['link'] = row.link
+        podcasts_dict.append(podcast_info)
+        print(counter, 'podcasts done.')
+        counter += 1
+    except Exception:
+        print(row.link, 'failed.')
+        counter += 1
+        pass
+
+with open('../data/json/podcast_info_add.json', 'w') as outfile:
+    json.dump(podcasts_dict, outfile)
+
