@@ -1,8 +1,8 @@
 # Podcast-Recommendation-System
 
-| Algorithm | Library | Built from scratch? | libraries used |
-| :---: | :---: | :---: | :---: |
-| CountVectorizer | sklearn | Yes | collections.Counter & scipy.sparse.csr_matrix |
+| Algorithm | Original Library | libraries used to build from scratch |
+| :---: | :---: | :---: |
+| CountVectorizer | sklearn | collections.Counter & scipy.sparse.csr_matrix |
   
   
 Resources:  
