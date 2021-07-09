@@ -2,7 +2,7 @@
 
 | Algorithm | Library | Built from scratch? | libraries used |
 | :---: | :---: | :---: | :---: |
-| CountVectorizer | sklearn | Yes | collections.Counter and scipy.sparse.csr_matrix |
+| CountVectorizer | sklearn | Yes | collections.Counter & scipy.sparse.csr_matrix |
   
   
 Resources:  
