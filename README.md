@@ -5,3 +5,4 @@
 Resources:  
 https://www.ywcascotland.org/feminism-podcast-recommendations/  
 https://github.com/siddgood/podcast-recommendation-engine
+ - Siddgood did an amazing job in building a recommednation system. I wrote all the codes by myself but the concept is based on this github repository.
