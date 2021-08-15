@@ -28,20 +28,46 @@ Other than that, I have also created a word cloud plot for each genre. The bigge
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/music.png" />
 
-## Recommendation System
-
+## [Recommendation System](https://nbviewer.jupyter.org/github/Peter-Chong/Podcast-Recommendation-System/blob/main/notebook/Recommendation.ipynb)
 
 ### Text Pre-Processing
 
+We first concatenate the textual columns and pre-process them by the following steps:
+1. Remove any links (URLs)
+2. Tokenize text
+3. Remove custom stop words
+4. Lemmatize text
 
 ### CountVectorizer (Bag-Of-Words) + Cosine Similarity
 
+We then apply CountVectorizer model which utilizes bag-of-words method to count the frequency of words in the text. Then we use cosine similarity to recommend 5 other podcasts. The figure below shows some examples of recommendations.
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/bow_recs.png" />
+
+If the recommendation is one of the podcasts the subscriber also subscribed to, it will mark as true positive. We can also see that the recommendation is fairly accurate as the 5 recommendations are all within the same genre as the input podcast.  
+  
+We then try to visualize the CountVectorizer matrix by applying supervised UMAP and reduce the dimension to 2.
+
+(img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/bow_umap.png" />
 
 ### TF-IDF + Cosine Similarity
 
 
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/tfidf_recs.png" />
+
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/tfidf_umap.png" />
+
 ### Word2Vec + Cosine Similarity
 
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_recs.png" />
+
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_top10.png" />
+
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_umap.png" />
 
 ## Future Scope
 
