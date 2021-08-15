@@ -16,11 +16,11 @@ As an avid podcast listener, I always listen to them while I am doing my house c
 
 ## [Exploratory Data Analysis](https://nbviewer.jupyter.org/github/Peter-Chong/Podcast-Recommendation-System/blob/main/notebook/Exploratory%20Data%20Analysis.ipynb)
 
-One interesting analysis I did was a network graph. Given a podcast, the data I scrapped would include what other subscriber of that podcast also subscribes to. Hence, we can create a network graph to visualize those relationship. However, 4,460 podcasts are too much to be visualized in a 2-dimensional graph. Hence, we'll just look into one of the genre, namely education genre.
+One interesting analysis I did was a network graph. Given a podcast, the data I scrapped would include what other subscriber of that podcast also subscribes to. Hence, we can create a network graph to visualize those relationships. However, 4,460 podcasts are too much to be visualized in a 2-dimensional graph. Hence, we'll just look into one of the genres, namely the education genre.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/map.png" />
 
-Other than that, I have also created a word cloud plot for each genre. The bigger words shows the word that are most frequently used in the podcast description. For example, gardening and game is two common words in the Leisure genre, life and expert in Health & Fitness genre and interview and musician in Music genre.
+Other than that, I have also created a word cloud plot for each genre. The bigger the word is, the more frequent it is used in the podcast's description. For example, gardening and game is two common words in the Leisure genre, life and expert in Health & Fitness genre and interview and musician in the Music genre.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/leisure.png" />
 
