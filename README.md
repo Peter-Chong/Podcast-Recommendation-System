@@ -46,31 +46,39 @@ We then apply CountVectorizer model which utilizes bag-of-words method to count 
 
 If the recommendation is one of the podcasts the subscriber also subscribed to, it will mark as true positive. We can also see that the recommendation is fairly accurate as the 5 recommendations are all within the same genre as the input podcast.  
   
-We then try to visualize the CountVectorizer matrix by applying supervised UMAP and reduce the dimension to 2.
+We then try to visualize the CountVectorizer matrix by applying supervised UMAP and reduce the dimension to 2. 
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/bow_umap.png" />
 
 ### TF-IDF + Cosine Similarity
 
+Next, we then apply TF-IDF model to vectorize the text. This model works well since it reduce the weight for those frequent and generic words such as "podcast" or "this". As we can observe in the UMAP plot below, this model clusters the genre pretty well.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/tfidf_recs.png" />
-
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/tfidf_umap.png" />
 
 ### Word2Vec + Cosine Similarity
 
+Lastly, we apply the Word2Vec model. 
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_recs.png" />
 
+By applying word2vec model, it comes with a function where we can see the "synonym" of a word. For example, the word funny is most similar to the word hilarious and delightfully based on our model.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_top10.png" />
 
+The UMAP also shows a nice clustering between the genres.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_umap.png" />
 
 ## Future Scope
 
+In the future, I hope to:
+1) Apply different model such as GloVe
+2) Recommend podcast episodes instead
+3) Create a better testing metric such as genre classification to validate model
+4) Try out collaborative filtering
 
 ## Code and Resources:  
 **Programming Language:** Python  
