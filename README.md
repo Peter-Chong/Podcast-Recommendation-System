@@ -31,7 +31,7 @@
 
 ## Code and Resources:  
 **Programming Language:** Python  
-**Packages:** re, nltk, numpy pandas, umap, plotly, sklearn, gensim, json, networkx  
+**Packages:** NumPy, Pandas, NLTK, Plotly, Scikit-Learn, Gensim, json, re, UMAP, NetworkX   
 **Data Soucres:** https://podcasts.apple.com/us/genre/podcasts/id26  
 **Resources:**  
 https://www.ywcascotland.org/feminism-podcast-recommendations/  
