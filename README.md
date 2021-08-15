@@ -20,7 +20,7 @@ One interesting analysis I did was a network graph. Given a podcast, the data I 
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/map.png" />
 
-Other than that, I have also created a word cloud plot for each genre. The bigger words shows the word that are most frequently used in the podcast description.
+Other than that, I have also created a word cloud plot for each genre. The bigger words shows the word that are most frequently used in the podcast description. For example, gardening and game is two common words in the Leisure genre, life and expert in Health & Fitness genre and interview and musician in Music genre.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/leisure.png" />
 
