@@ -4,19 +4,19 @@
 
 ## Problem Statement
 
-As an avid podcast listener, I always listen to them while I am doing my house chores. However, I find myself spending more time browsing for a good podcast than doing my house chores. This got me thinking, why don't I create a podcast recommender to recommend me a podcast rather than choosing based on the titles?
+As an avid podcast listener, I always listen to one while I am doing my house chores. However, I often find myself spending more time browsing for a good podcast channel than actually listening to them. This got me thinking, why don't I create a podcast recommender to give me suggestions for a podcast rather than simply choosing based on the podcast's titles?
 
 ## Project Overview
 
-* Built a web scrapper from scratch and scraped 4,460 podcasts data from Apple Podcast using Selenium and BeautifulSoup  
+* Built a web scraper from scratch and scraped 4,460 podcasts data from Apple Podcast using Selenium and BeautifulSoup  
 * Cleaned data by removing non-English podcasts, URLs and non-alphanumeric characters using regular expressions  
-* Showcased Natural Language Processing techniques by tokenizing texts, remove stop words and stem texts using lemmatization  
+* Showcased Natural Language Processing techniques by tokenizing texts, removing stop words and stemming texts using lemmatization  
 * Performed exploratory data analysis and created plots such as Network Graph to see the relationships between podcasts  
 * Created 3 different models to transform texts into vector/matrix representation (Bag-of-Words, TF-IDF and Word2Vec)
 
 ## [Exploratory Data Analysis](https://nbviewer.jupyter.org/github/Peter-Chong/Podcast-Recommendation-System/blob/main/notebook/Exploratory%20Data%20Analysis.ipynb)
 
-One interesting analysis I did was a network graph. Given a podcast, the data I scrapped would include what other subscriber of that podcast also subscribes to. Hence, we can create a network graph to visualize those relationships. However, 4,460 podcasts are too much to be visualized in a 2-dimensional graph. Hence, we'll just look into one of the genres, namely the education genre.
+One interesting analysis I did was I created a network graph. Given a podcast, the data I scraped would include what other subscribers of that podcast also subscribed to. The network graph then visualized those relationships. However, 4,460 podcasts are too many to be visualized in a 2-dimensional graph. Hence, we'll just look into one of the genres, namely the education genre.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/map.png" />
 
@@ -52,7 +52,7 @@ We then try to visualize the CountVectorizer matrix by applying supervised UMAP 
 
 ### TF-IDF + Cosine Similarity
 
-Next, we then apply TF-IDF model to vectorize the text. This model works well since it reduce the weight for those frequent and generic words such as "podcast" or "this". As we can observe in the UMAP plot below, this model clusters the genre pretty well.
+Next, we then apply TF-IDF model to vectorize the text. This model works well since it reduces the weight for those frequent and generic words such as "podcast" or "this". As we can observe in the UMAP plot below, this model clusters the genre pretty well.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/tfidf_recs.png" />
 
@@ -64,7 +64,7 @@ Lastly, we apply the Word2Vec model.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_recs.png" />
 
-By applying word2vec model, it comes with a function where we can see the "synonym" of a word. For example, the word funny is most similar to the word hilarious and delightfully based on our model.
+The Word2Vec model comes with a function to see the "synonym" of a word. For example, the word funny is most similar to the word hilarious and delightfully based on our model.
 
 <img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/w2v_top10.png" />
 
