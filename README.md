@@ -14,8 +14,19 @@ As an avid podcast listener, I always listen to them while I am doing my house c
 * Performed exploratory data analysis and created plots such as Network Graph to see the relationships between podcasts  
 * Created 3 different models to transform texts into vector/matrix representation (Bag-of-Words, TF-IDF and Word2Vec)
 
-## Exploratory Data Analysis
+## [Exploratory Data Analysis](https://nbviewer.jupyter.org/github/Peter-Chong/Podcast-Recommendation-System/blob/main/notebook/Exploratory%20Data%20Analysis.ipynb)
 
+One interesting analysis I did was a network graph. Given a podcast, the data I scrapped would include what other subscriber of that podcast also subscribes to. Hence, we can create a network graph to visualize those relationship. However, 4,460 podcasts are too much to be visualized in a 2-dimensional graph. Hence, we'll just look into one of the genre, namely education genre.
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/map.png" />
+
+Other than that, I have also created a word cloud plot for each genre. The bigger words shows the word that are most frequently used in the podcast description.
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/leisure.png" />
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/health.png" />
+
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/music.png" />
 
 ## Recommendation System
 
