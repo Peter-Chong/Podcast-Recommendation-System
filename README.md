@@ -48,7 +48,7 @@ If the recommendation is one of the podcasts the subscriber also subscribed to, 
   
 We then try to visualize the CountVectorizer matrix by applying supervised UMAP and reduce the dimension to 2.
 
-(img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/bow_umap.png" />
+<img src="https://github.com/Peter-Chong/Podcast-Recommendation-System/blob/main/images/bow_umap.png" />
 
 ### TF-IDF + Cosine Similarity
 
